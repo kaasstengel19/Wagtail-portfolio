@@ -1,0 +1,450 @@
+
+/* ==========================
+   ALGEMENE INSTELLINGEN
+========================== */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        system-ui, Roboto, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: grid;
+    gap: 30px;
+    grid-template-rows: min-content 1fr min-content;
+    background-color: #f4f3ef;
+    color: #202b3c;
+    line-height: 1.7;
+}
+
+/* ==========================
+   NAVIGATIE
+========================== */
+
+header {
+    background-color: #172438;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 0 0 14px 14px;
+    border: none;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 22px;
+    transition: color 0.2s ease;
+}
+
+header a:hover {
+    color: #ffad73;
+}
+
+/* ==========================
+   ALGEMENE PAGINA-INHOUD
+========================== */
+
+main {
+    padding: 30px 10px;
+}
+
+h1 {
+    color: #172438;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #172438;
+    margin-top: 40px;
+    font-size: 1.7rem;
+}
+
+h3 {
+    color: #d96c35;
+}
+
+p {
+    color: #526071;
+}
+
+/* ==========================
+   HOMEPAGE / HERO
+========================== */
+
+.template-homepage main {
+    text-align: center;
+}
+
+.hero {
+    padding: 35px 20px 55px;
+    background: linear-gradient(135deg, #ffffff, #eeece6);
+    border-radius: 18px;
+    border: 1px solid #e2dfd7;
+}
+
+.hero h1 {
+    margin-top: 10px;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+}
+
+.hero-image {
+    width: 40%;
+    max-width: 320px;
+    min-width: 180px;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(23, 36, 56, 0.15);
+}
+
+/* ==========================
+   CTA KNOPPEN
+========================== */
+
+.hero a {
+    display: inline-block;
+    margin: 12px 6px 0;
+    padding: 12px 24px;
+    background-color: #e97943;
+    color: white;
+    border: 2px solid #e97943;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.hero a:hover {
+    background-color: #c95e2d;
+    border-color: #c95e2d;
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   CONTACTFORMULIER
+========================== */
+
+.page-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #e4e1da;
+    box-shadow: 0 8px 25px rgba(23, 36, 56, 0.06);
+}
+
+.page-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #172438;
+}
+
+.page-form :is(textarea, input, select) {
+    width: 100%;
+    max-width: 600px;
+    min-height: 44px;
+    padding: 11px 13px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    border: 1px solid #d5d8dd;
+    border-radius: 7px;
+    background-color: #fafafa;
+    font: inherit;
+}
+
+.page-form :is(textarea, input, select):focus {
+    outline: 2px solid #e97943;
+    border-color: #e97943;
+}
+
+.page-form textarea {
+    min-height: 140px;
+}
+
+.page-form .helptext {
+    font-style: italic;
+    color: #788393;
+}
+
+.page-form button {
+    background-color: #e97943;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.page-form button:hover {
+    background-color: #c95e2d;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    background-color: #172438;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 14px 14px 0 0;
+}
+
+footer p,
+footer a {
+    color: #e5e9ef;
+}
+
+/* ==========================
+   TOEGANKELIJKHEID
+========================== */
+
+.skip-link {
+    position: absolute;
+    top: -30px;
+}
+
+.skip-link:focus-visible {
+    top: 5px;
+}
+
+/* ==========================
+   MOBIELE WEERGAVE
+========================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 0 12px;
+        gap: 18px;
+    }
+
+    header {
+        padding: 18px 14px;
+    }
+
+    header a {
+        margin-right: 12px;
+    }
+
+    main {
+        padding: 15px 5px;
+    }
+
+    .hero {
+        padding: 25px 12px 35px;
+    }
+
+    .hero-image {
+        width: 75%;
+    }
+
+    .page-form {
+        padding: 18px;
+    }
+}
+
+
+/* =================================
+   CV / Portfolio pagina
+   ================================= */
+
+.template-portfolio .cv-page {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #e2dfd7;
+    margin: 20px 0;
+}
+
+.template-portfolio .cv-page > h1 {
+    color: #172438;
+    font-size: 36px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #e97943;
+    padding-bottom: 15px;
+}
+
+/* Ruimte tussen de Wagtail-blokken */
+.template-portfolio .cv-page .block {
+    margin-bottom: 30px;
+}
+
+/* Titels in de blokken */
+.template-portfolio .cv-page h2 {
+    color: #172438;
+    margin-top: 75px;
+    margin-bottom: 15px;
+}
+
+.template-portfolio .cv-page h3 {
+    margin-top: 50px;
+    color: #d96c35;
+}
+
+/* Afbeeldingen in de blokken */
+.template-portfolio .cv-page img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Links */
+.template-portfolio .cv-page a {
+    color: #d96c35;
+    text-decoration: none;
+}
+
+.template-portfolio .cv-page a:hover {
+    text-decoration: underline;
+}
+
+/* Mobiele weergave */
+@media (max-width: 600px) {
+    .template-portfolio .cv-page {
+        padding: 18px;
+    }
+
+    .template-portfolio .cv-page > h1 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* =================================
+   Contactpagina
+   ================================= */
+
+.template-formpage .contact-page {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+/* Titel en introductie */
+
+.template-formpage .contact-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.template-formpage .contact-header h1 {
+    color: #172438;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.template-formpage .contact-intro {
+    color: #788393;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Formuliercontainer */
+
+.template-formpage .contact-form-container {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid #e2dfd7;
+    box-shadow: 0 5px 20px rgba(23, 36, 56, 0.06);
+}
+
+/* Formuliervelden */
+
+.template-formpage .page-form label {
+    display: block;
+    color: #172438;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.template-formpage .page-form input,
+.template-formpage .page-form textarea,
+.template-formpage .page-form select {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #d5d9df;
+    border-radius: 8px;
+    font: inherit;
+    background: #fafafa;
+}
+
+/* Focus op invoervelden */
+
+.template-formpage .page-form input:focus,
+.template-formpage .page-form textarea:focus,
+.template-formpage .page-form select:focus {
+    outline: none;
+    border-color: #e97943;
+    box-shadow: 0 0 0 3px rgba(233, 121, 67, 0.15);
+}
+
+/* Tekstveld kleiner maken */
+
+.template-formpage .page-form textarea {
+    min-height: 90px;
+    height: 90px;
+    resize: vertical;
+}
+
+/* Verzendknop centreren */
+
+.template-formpage .page-form button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 13px 28px;
+    background: #e97943;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.template-formpage .page-form button:hover {
+    background: #d96c35;
+}
+
+/* Mobiele weergave */
+
+@media (max-width: 600px) {
+    .template-formpage .contact-form-container {
+        padding: 20px;
+    }
+
+    .template-formpage .contact-header h1 {
+        font-size: 28px;
+    }
+
+    .template-formpage .contact-page {
+        margin: 15px auto;
+    }
+}
